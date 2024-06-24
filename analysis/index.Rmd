@@ -12,3 +12,4 @@ Welcome to my research website.
 
 * [Teeth growth analysis](teeth.html)
 * [Hello](hello.html)
+* [Summary of Paper Mapping information-rich genotype-phenotype landscapes with genome-scale Perturb-seq](Analysis1.html)
