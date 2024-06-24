@@ -1,0 +1,10 @@
+---
+title: "hello"
+author: "jliucx"
+date: "2024-06-23"
+output: workflowr::wflow_html
+editor_options: 
+  chunk_output_type: inline
+---
+
+## hello
