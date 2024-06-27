@@ -436,15 +436,15 @@ results.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomjliucxmyprojecttreef021c4a1d35cb27927aaa23c25cb7c6aa48ace1atargetblankf021c4aa">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomjliucxmyprojecttree61bf8c7b194a72232794440abef03dad6da5a7c3targetblank61bf8c7a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/jliucx/myproject/tree/f021c4a1d35cb27927aaa23c25cb7c6aa48ace1a" target="_blank">f021c4a</a>
+<a href="https://github.com/jliucx/myproject/tree/61bf8c7b194a72232794440abef03dad6da5a7c3" target="_blank">61bf8c7</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomjliucxmyprojecttreef021c4a1d35cb27927aaa23c25cb7c6aa48ace1atargetblankf021c4aa"
+id="strongRepositoryversionstrongahrefhttpsgithubcomjliucxmyprojecttree61bf8c7b194a72232794440abef03dad6da5a7c3targetblank61bf8c7a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -454,7 +454,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/jliucx/myproject/tree/f021c4a1d35cb27927aaa23c25cb7c6aa48ace1a" target="_blank">f021c4a</a>.
+<a href="https://github.com/jliucx/myproject/tree/61bf8c7b194a72232794440abef03dad6da5a7c3" target="_blank">61bf8c7</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -522,6 +522,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/jliucx/myproject/blob/61bf8c7b194a72232794440abef03dad6da5a7c3/analysis/Analysis1.Rmd" target="_blank">61bf8c7</a>
+</td>
+<td>
+jliucx
+</td>
+<td>
+2024-06-27
+</td>
+<td>
+Complete first analysis
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/jliucx/myproject/d467b9e7838b92f5b556397c98f26281ddb6d588/docs/Analysis1.html" target="_blank">d467b9e</a>
+</td>
+<td>
+jliucx
+</td>
+<td>
+2024-06-27
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -635,6 +669,17 @@ functional genomics analysis to prioritize variants that are located in
 regions likely to influence gene expression or function, thereby
 identifying those with higher potential to be causal.</p>
 </div>
+<div id="cis--and-trans-regulatory-elements" class="section level3">
+<h3>Cis- and Trans-Regulatory Elements:</h3>
+<ul>
+<li><p>Cis-Regulatory Elements (CREs): DNA sequences located near the
+genes they regulate (on the same chromosome). They often include
+promoters and enhancers.</p></li>
+<li><p>Trans-Regulatory Elements: Factors, such as transcription factors
+or microRNAs, that regulate genes located on different chromosomes or
+far from the genes they regulate.</p></li>
+</ul>
+</div>
 </div>
 <div id="part-2.-rationale-for-experiment-design"
 class="section level2">
@@ -666,12 +711,34 @@ inhibition is to find out what genes are regulated by the CRE. Gene
 inhibition is to find relationships among those genes, which can help to
 identify whether the gene is directly regulated by the CRE or
 not.</p></li>
-<li><p><strong>Question: why multiple perturbations?</strong></p>
-<p><strong>Answer: Multiple perturbations can help identify specific
-regulatory elements within a locus that are responsible for changes in
-gene expression or narrow down the specific variant or small set of
-variants that are truly causal.</strong></p></li>
-<li><p><strong>Question: why design 3 kinds of gRNA?</strong></p>
+<li><p>To explore whether the genes in the trans-regulatory networks
+also play roles in blood traits and harbor cis-regulatory genetic
+variants, they identified putative causal genes for several GWAS studies
+by selecting protein-coding genes close to fine-mapped GWAS loci. They
+grouped these genes based on their roles in different blood cell types
+(platelets, RBCs, WBCs), and checked for enrichments of blood cell trait
+GWAS genes in the trans-regulatory networks. Nearly all trans-regulatory
+networks showed enrichment for blood cell trait GWAS genes, indicating
+that these genes’ known roles in blood cell development are mediated
+through their effects on regulatory networks.</p></li>
+<li><p><strong>Question: why grouping these genes based on their roles
+in different blood cell types (platelets, RBCs, WBCs)</strong></p>
+<p><strong>Answer:</strong> Different cell types are regulated by
+distinct sets of transcription factors, enhancers, and other regulatory
+elements. Grouping genes by cell type allows for the identification of
+cell-type-specific regulatory mechanisms. The transcription factors
+GFI1B, NFE2, IKZF1, and RUNX1 might regulate different sets of genes in
+platelets compared to RBCs or WBCs. Understanding these specific
+regulatory mechanisms can provide insights into how these cell types
+develop and function.</p></li>
+<li><p><strong>Question: why multiple perturbations at same
+loci?</strong></p>
+<p><strong>Answer:</strong> Multiple perturbations can help identify
+specific regulatory elements within a locus that are responsible for
+changes in gene expression or narrow down the specific variant or small
+set of variants that are truly causal.</p></li>
+<li><p><strong>Question: why design 3 kinds of control
+gRNA?</strong></p>
 <p><strong>Answer</strong>:</p>
 <p>1. Negative Controls (Nontargeting Controls)</p>
 <p>Negative controls are designed to not target any gene in the genome.
