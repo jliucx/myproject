@@ -12,7 +12,7 @@
 
 <meta name="date" content="2024-06-24" />
 
-<title>Mapping Information Summary</title>
+<title>Summary: Discovery of target genes and pathways at GWAS loci by pooled single-cell CRISPR screens</title>
 
 <script src="site_libs/header-attrs-2.27/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -358,7 +358,8 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Mapping Information Summary</h1>
+<h1 class="title toc-ignore">Summary: Discovery of target genes and
+pathways at GWAS loci by pooled single-cell CRISPR screens</h1>
 <h4 class="date">2024-06-24</h4>
 
 </div>
@@ -388,7 +389,7 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2024-06-24
+<strong>Last updated:</strong> 2024-06-27
 </p>
 <p>
 <strong>Checks:</strong> <span
@@ -435,15 +436,15 @@ results.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomjliucxmyprojecttree5b88a7dfad395cced6f45540974a3acbc87d9819targetblank5b88a7da">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomjliucxmyprojecttreef021c4a1d35cb27927aaa23c25cb7c6aa48ace1atargetblankf021c4aa">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/jliucx/myproject/tree/5b88a7dfad395cced6f45540974a3acbc87d9819" target="_blank">5b88a7d</a>
+<a href="https://github.com/jliucx/myproject/tree/f021c4a1d35cb27927aaa23c25cb7c6aa48ace1a" target="_blank">f021c4a</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomjliucxmyprojecttree5b88a7dfad395cced6f45540974a3acbc87d9819targetblank5b88a7da"
+id="strongRepositoryversionstrongahrefhttpsgithubcomjliucxmyprojecttreef021c4a1d35cb27927aaa23c25cb7c6aa48ace1atargetblankf021c4aa"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -453,7 +454,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/jliucx/myproject/tree/5b88a7dfad395cced6f45540974a3acbc87d9819" target="_blank">5b88a7d</a>.
+<a href="https://github.com/jliucx/myproject/tree/f021c4a1d35cb27927aaa23c25cb7c6aa48ace1a" target="_blank">f021c4a</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -472,7 +473,7 @@ Ignored files:
     Ignored:    .Rproj.user/
 
 Untracked files:
-    Untracked:  analysis/hello world.qmd
+    Untracked:  analysis/images/
 
 Unstaged changes:
     Modified:   README.md
@@ -523,6 +524,40 @@ Message
 <tbody>
 <tr>
 <td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/jliucx/myproject/blob/f021c4a1d35cb27927aaa23c25cb7c6aa48ace1a/analysis/Analysis1.Rmd" target="_blank">f021c4a</a>
+</td>
+<td>
+jliucx
+</td>
+<td>
+2024-06-27
+</td>
+<td>
+Complete first analysis
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/jliucx/myproject/5d9da0b0d97516166337364ee5e87fc7ca396686/docs/Analysis1.html" target="_blank">5d9da0b</a>
+</td>
+<td>
+jliucx
+</td>
+<td>
+2024-06-24
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
 html
 </td>
 <td>
@@ -562,8 +597,126 @@ Add first summary
 </div>
 </div>
 </div>
-<div id="try" class="section level2">
-<h2>Try</h2>
+<div id="part-1.-terminologies" class="section level2">
+<h2>Part 1. Terminologies</h2>
+<div id="massively-parallel-crispr-screen" class="section level3">
+<h3><strong>Massively parallel CRISPR screen</strong></h3>
+<p>A massively parallel CRISPR screen is a high-throughput method used
+to investigate the function of genes on a large scale. Here’s a
+breakdown of the key components:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>CRISPR (Clustered Regularly Interspaced Short Palindromic
+Repeats)</strong>: This is a powerful technology that allows for the
+precise editing of DNA. By using a guide RNA (gRNA) to target specific
+DNA sequences, the CRISPR-associated protein (Cas9) can make cuts at
+these locations, allowing researchers to delete, insert, or modify
+genetic material.</p></li>
+<li><p><strong>Screen</strong>: In the context of genetic research, a
+screen refers to an experimental approach where many different genetic
+modifications are tested simultaneously to observe their effects. This
+is often used to identify genes that are involved in particular cellular
+processes or diseases.</p></li>
+<li><p><strong>Massively Parallel</strong>: This refers to the ability
+to perform many (often thousands or millions) of CRISPR edits in a
+single experiment. The term “massively parallel” highlights the scale
+and efficiency of the process.</p></li>
+</ol>
+<p><strong>Notice</strong>: In a CRISPR screen, it is possible for each
+cell to receive more than one guide RNA (gRNA). This approach, known as
+a multiplexed CRISPR screen, allows for the simultaneous targeting of
+multiple genes within the same cell.</p>
+</div>
+<div id="fine-mapping" class="section level3">
+<h3>Fine mapping</h3>
+<p>Fine-mapping is the process of identifying specific genetic variants
+that are most likely to be causal within a region identified by
+genome-wide association studies (GWAS). This is usually followed by
+functional genomics analysis to prioritize variants that are located in
+regions likely to influence gene expression or function, thereby
+identifying those with higher potential to be causal.</p>
+</div>
+</div>
+<div id="part-2.-rationale-for-experiment-design"
+class="section level2">
+<h2>Part 2. Rationale for Experiment Design</h2>
+<ul>
+<li><p>Using multiple perturbations at the same locus helps to
+distinguish which variants are truly causal by observing the effects of
+each change. In GWAS study, not all of these variants are directly
+causing the trait or disease; some are simply linked to causal variants
+due to their proximity on the chromosome i.e.LD.</p></li>
+<li><p>They combined systematic targeted inhibition of noncoding GWAS
+loci coupled with single-cell sequencing (STING-seq), to identify target
+genes at noncoding GWAS loci using single-cell pooled CRISPR
+screens.</p></li>
+<li><p>For a subset of validated CREs, they also inserted specific GWAS
+variants using base-editing STING-seq (beeSTING-seq) and quantified the
+effect size and direction of GWAS variants on gene expression. Direct
+variant insertion rather than slicing the CREs can identify the
+magnitude and direction of the effect on gene expression.</p></li>
+<li><p>To identify candidate CREs from GWAS, the integration of
+functional genomic data yielded a large set of targetable variants from
+UKBB and BCX GWASs (table S1, C and D). The variants that we selected
+were often the highest-probability variant in a fine-mapped GWAS locus
+(294 variants) or among the 10 most probable variants (249 variants). We
+also prioritized variants from non-European ancestries.</p></li>
+<li><p>To disentangle loci with multiple target genes in <em>cis</em>,
+they combined targeted CRE inhibition and gene inhibition. CRE
+inhibition is to find out what genes are regulated by the CRE. Gene
+inhibition is to find relationships among those genes, which can help to
+identify whether the gene is directly regulated by the CRE or
+not.</p></li>
+<li><p><strong>Question: why multiple perturbations?</strong></p>
+<p><strong>Answer: Multiple perturbations can help identify specific
+regulatory elements within a locus that are responsible for changes in
+gene expression or narrow down the specific variant or small set of
+variants that are truly causal.</strong></p></li>
+<li><p><strong>Question: why design 3 kinds of gRNA?</strong></p>
+<p><strong>Answer</strong>:</p>
+<p>1. Negative Controls (Nontargeting Controls)</p>
+<p>Negative controls are designed to not target any gene in the genome.
+These controls help to account for any non-specific effects caused by
+the delivery and expression of the CRISPR components. This includes
+potential off-target effects, immune responses, or general cellular
+stress responses that might be induced by the presence of the CRISPR
+machinery.</p>
+<p>2. Positive Controls (Targeting Highly-Expressed Genes at TSSs)</p>
+<p>Positive controls target known genes, often those that are highly
+expressed and well-characterized. Targeting the transcription start
+sites (TSSs) of these genes ensures that the CRISPR system is actively
+working. These controls confirm that the CRISPR system is functional and
+capable of inducing the expected effects. By targeting highly-expressed
+genes, researchers can easily observe the phenotypic changes or measure
+the gene expression changes, validating that the CRISPR editing is
+successful.</p>
+<p>3. Controls to Estimate Average Number of Perturbations (Multiple
+gRNAs Targeting a Gene Encoding a Ubiquitously Expressed Cell Surface
+Protein, CD55)</p>
+<p>These controls are designed to estimate the efficiency and average
+number of perturbations per cell. By targeting a ubiquitously expressed
+gene like CD55, researchers can use flow cytometry to measure how many
+gRNAs have successfully introduced changes in each cell. This helps in
+understanding the multiplicity of infection (MOI) and the overall
+effectiveness of the CRISPR library. Knowing the average number of
+perturbations per cell is crucial for interpreting the results of the
+screen accurately and ensuring that the observed effects are due to the
+intended genetic modifications.</p></li>
+</ul>
+</div>
+<div id="part-3.-workflow" class="section level2">
+<h2>Part 3. Workflow</h2>
+<ul>
+<li>Intersecting fine-mapped GWAS variants with biochemical hallmarks of
+enhancer activity to find cCREs.</li>
+<li>Use STING-seq to perturb CREs and find target genes.</li>
+<li>Targeting multiple CREs in some locus reveals nonfunctional linkage
+disequilibrium proxies</li>
+<li>Direct GWAS variant insertion with beeSTING-seq to identify the
+magnitude and direction of the effect on gene expression.</li>
+<li>Identify <em>trans</em>-effect networks of noncoding loci when
+<em>cis</em> target genes encoded transcription factors or
+microRNAs</li>
+</ul>
 </div>
 
 
