@@ -22,6 +22,12 @@ A massively parallel CRISPR screen is a high-throughput method used to investiga
 
 Fine-mapping is the process of identifying specific genetic variants that are most likely to be causal within a region identified by genome-wide association studies (GWAS). This is usually followed by functional genomics analysis to prioritize variants that are located in regions likely to influence gene expression or function, thereby identifying those with higher potential to be causal.
 
+### Cis- and Trans-Regulatory Elements:
+
+-   Cis-Regulatory Elements (CREs): DNA sequences located near the genes they regulate (on the same chromosome). They often include promoters and enhancers.
+
+-   Trans-Regulatory Elements: Factors, such as transcription factors or microRNAs, that regulate genes located on different chromosomes or far from the genes they regulate.
+
 ## Part 2. Rationale for Experiment Design
 
 -   Using multiple perturbations at the same locus helps to distinguish which variants are truly causal by observing the effects of each change. In GWAS study, not all of these variants are directly causing the trait or disease; some are simply linked to causal variants due to their proximity on the chromosome i.e.LD.
@@ -34,11 +40,17 @@ Fine-mapping is the process of identifying specific genetic variants that are mo
 
 -   To disentangle loci with multiple target genes in *cis*, they combined targeted CRE inhibition and gene inhibition. CRE inhibition is to find out what genes are regulated by the CRE. Gene inhibition is to find relationships among those genes, which can help to identify whether the gene is directly regulated by the CRE or not.
 
--   **Question: why multiple perturbations?**
+-   To explore whether the genes in the trans-regulatory networks also play roles in blood traits and harbor cis-regulatory genetic variants, they identified putative causal genes for several GWAS studies by selecting protein-coding genes close to fine-mapped GWAS loci. They grouped these genes based on their roles in different blood cell types (platelets, RBCs, WBCs), and checked for enrichments of blood cell trait GWAS genes in the trans-regulatory networks. Nearly all trans-regulatory networks showed enrichment for blood cell trait GWAS genes, indicating that these genes’ known roles in blood cell development are mediated through their effects on regulatory networks.
 
-    **Answer: Multiple perturbations can help identify specific regulatory elements within a locus that are responsible for changes in gene expression or narrow down the specific variant or small set of variants that are truly causal.**
+-   **Question: why grouping these genes based on their roles in different blood cell types (platelets, RBCs, WBCs)**
 
--   **Question: why design 3 kinds of gRNA?**
+    **Answer:** Different cell types are regulated by distinct sets of transcription factors, enhancers, and other regulatory elements. Grouping genes by cell type allows for the identification of cell-type-specific regulatory mechanisms. The transcription factors GFI1B, NFE2, IKZF1, and RUNX1 might regulate different sets of genes in platelets compared to RBCs or WBCs. Understanding these specific regulatory mechanisms can provide insights into how these cell types develop and function.
+
+-   **Question: why multiple perturbations at same loci?**
+
+    **Answer:** Multiple perturbations can help identify specific regulatory elements within a locus that are responsible for changes in gene expression or narrow down the specific variant or small set of variants that are truly causal.
+
+-   **Question: why design 3 kinds of control gRNA?**
 
     **Answer**:
 
