@@ -1,7 +1,63 @@
 ---
-title: "Mapping Information Summary"
+title: "Summary: Discovery of target genes and pathways at GWAS loci by pooled single-cell CRISPR screens"
 output: workflowr::wflow_html
 date: "2024-06-24"
 ---
 
-## Try
+## Part 1. Terminologies
+
+### **Massively parallel CRISPR screen**
+
+A massively parallel CRISPR screen is a high-throughput method used to investigate the function of genes on a large scale. Here's a breakdown of the key components:
+
+1.  **CRISPR (Clustered Regularly Interspaced Short Palindromic Repeats)**: This is a powerful technology that allows for the precise editing of DNA. By using a guide RNA (gRNA) to target specific DNA sequences, the CRISPR-associated protein (Cas9) can make cuts at these locations, allowing researchers to delete, insert, or modify genetic material.
+
+2.  **Screen**: In the context of genetic research, a screen refers to an experimental approach where many different genetic modifications are tested simultaneously to observe their effects. This is often used to identify genes that are involved in particular cellular processes or diseases.
+
+3.  **Massively Parallel**: This refers to the ability to perform many (often thousands or millions) of CRISPR edits in a single experiment. The term "massively parallel" highlights the scale and efficiency of the process.
+
+**Notice**: In a CRISPR screen, it is possible for each cell to receive more than one guide RNA (gRNA). This approach, known as a multiplexed CRISPR screen, allows for the simultaneous targeting of multiple genes within the same cell.
+
+### Fine mapping
+
+Fine-mapping is the process of identifying specific genetic variants that are most likely to be causal within a region identified by genome-wide association studies (GWAS). This is usually followed by functional genomics analysis to prioritize variants that are located in regions likely to influence gene expression or function, thereby identifying those with higher potential to be causal.
+
+## Part 2. Rationale for Experiment Design
+
+-   Using multiple perturbations at the same locus helps to distinguish which variants are truly causal by observing the effects of each change. In GWAS study, not all of these variants are directly causing the trait or disease; some are simply linked to causal variants due to their proximity on the chromosome i.e.LD.
+
+-   They combined systematic targeted inhibition of noncoding GWAS loci coupled with single-cell sequencing (STING-seq), to identify target genes at noncoding GWAS loci using single-cell pooled CRISPR screens.
+
+-   For a subset of validated CREs, they also inserted specific GWAS variants using base-editing STING-seq (beeSTING-seq) and quantified the effect size and direction of GWAS variants on gene expression. Direct variant insertion rather than slicing the CREs can identify the magnitude and direction of the effect on gene expression.
+
+-   To identify candidate CREs from GWAS, the integration of functional genomic data yielded a large set of targetable variants from UKBB and BCX GWASs (table S1, C and D). The variants that we selected were often the highest-probability variant in a fine-mapped GWAS locus (294 variants) or among the 10 most probable variants (249 variants). We also prioritized variants from non-European ancestries.
+
+-   To disentangle loci with multiple target genes in *cis*, they combined targeted CRE inhibition and gene inhibition. CRE inhibition is to find out what genes are regulated by the CRE. Gene inhibition is to find relationships among those genes, which can help to identify whether the gene is directly regulated by the CRE or not.
+
+-   **Question: why multiple perturbations?**
+
+    **Answer: Multiple perturbations can help identify specific regulatory elements within a locus that are responsible for changes in gene expression or narrow down the specific variant or small set of variants that are truly causal.**
+
+-   **Question: why design 3 kinds of gRNA?**
+
+    **Answer**:
+
+    1\. Negative Controls (Nontargeting Controls)
+
+    Negative controls are designed to not target any gene in the genome. These controls help to account for any non-specific effects caused by the delivery and expression of the CRISPR components. This includes potential off-target effects, immune responses, or general cellular stress responses that might be induced by the presence of the CRISPR machinery.
+
+    2\. Positive Controls (Targeting Highly-Expressed Genes at TSSs)
+
+    Positive controls target known genes, often those that are highly expressed and well-characterized. Targeting the transcription start sites (TSSs) of these genes ensures that the CRISPR system is actively working. These controls confirm that the CRISPR system is functional and capable of inducing the expected effects. By targeting highly-expressed genes, researchers can easily observe the phenotypic changes or measure the gene expression changes, validating that the CRISPR editing is successful.
+
+    3\. Controls to Estimate Average Number of Perturbations (Multiple gRNAs Targeting a Gene Encoding a Ubiquitously Expressed Cell Surface Protein, CD55)
+
+    These controls are designed to estimate the efficiency and average number of perturbations per cell. By targeting a ubiquitously expressed gene like CD55, researchers can use flow cytometry to measure how many gRNAs have successfully introduced changes in each cell. This helps in understanding the multiplicity of infection (MOI) and the overall effectiveness of the CRISPR library. Knowing the average number of perturbations per cell is crucial for interpreting the results of the screen accurately and ensuring that the observed effects are due to the intended genetic modifications.
+
+## Part 3. Workflow
+
+-   Intersecting fine-mapped GWAS variants with biochemical hallmarks of enhancer activity to find cCREs.
+-   Use STING-seq to perturb CREs and find target genes.
+-   Targeting multiple CREs in some locus reveals nonfunctional linkage disequilibrium proxies
+-   Direct GWAS variant insertion with beeSTING-seq to identify the magnitude and direction of the effect on gene expression.
+-   Identify *trans*-effect networks of noncoding loci when *cis* target genes encoded transcription factors or microRNAs
