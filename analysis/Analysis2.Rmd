@@ -1,0 +1,5 @@
+---
+title: "Summary: Discovery of target genes and pathways at GWAS loci by pooled single-cell CRISPR screens"
+output: workflowr::wflow_html
+date: "2024-06-24"
+---
