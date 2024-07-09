@@ -12,7 +12,7 @@
 
 <meta name="date" content="2024-06-24" />
 
-<title>Summary: Discovery of target genes and pathways at GWAS loci by pooled single-cell CRISPR screens</title>
+<title>Summary: Mapping information-rich genotype-phenotype landscapes with genome-scale Perturb-seq</title>
 
 <script src="site_libs/header-attrs-2.27/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -358,8 +358,8 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Summary: Discovery of target genes and
-pathways at GWAS loci by pooled single-cell CRISPR screens</h1>
+<h1 class="title toc-ignore">Summary: Mapping information-rich
+genotype-phenotype landscapes with genome-scale Perturb-seq</h1>
 <h4 class="date">2024-06-24</h4>
 
 </div>
@@ -389,7 +389,7 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2024-07-07
+<strong>Last updated:</strong> 2024-07-09
 </p>
 <p>
 <strong>Checks:</strong> <span
@@ -436,15 +436,15 @@ results.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomjliucxmyprojecttree08dd4b6e890b7a29e61bf92a4486491e11847923targetblank08dd4b6a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomjliucxmyprojecttree78329171c8fef44d2e3f89c15504457ffe50c996targetblank7832917a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/jliucx/myproject/tree/08dd4b6e890b7a29e61bf92a4486491e11847923" target="_blank">08dd4b6</a>
+<a href="https://github.com/jliucx/myproject/tree/78329171c8fef44d2e3f89c15504457ffe50c996" target="_blank">7832917</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomjliucxmyprojecttree08dd4b6e890b7a29e61bf92a4486491e11847923targetblank08dd4b6a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomjliucxmyprojecttree78329171c8fef44d2e3f89c15504457ffe50c996targetblank7832917a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -454,7 +454,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/jliucx/myproject/tree/08dd4b6e890b7a29e61bf92a4486491e11847923" target="_blank">08dd4b6</a>.
+<a href="https://github.com/jliucx/myproject/tree/78329171c8fef44d2e3f89c15504457ffe50c996" target="_blank">7832917</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -527,6 +527,40 @@ Message
 Rmd
 </td>
 <td>
+<a href="https://github.com/jliucx/myproject/blob/78329171c8fef44d2e3f89c15504457ffe50c996/analysis/Analysis2.Rmd" target="_blank">7832917</a>
+</td>
+<td>
+jliucx
+</td>
+<td>
+2024-07-09
+</td>
+<td>
+Publish second summary
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/jliucx/myproject/011bcf5eb4ae7bea4565de303d7e9cb1fbb3d971/docs/Analysis2.html" target="_blank">011bcf5</a>
+</td>
+<td>
+jliucx
+</td>
+<td>
+2024-07-07
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
 <a href="https://github.com/jliucx/myproject/blob/08dd4b6e890b7a29e61bf92a4486491e11847923/analysis/Analysis2.Rmd" target="_blank">08dd4b6</a>
 </td>
 <td>
@@ -546,8 +580,207 @@ Add the second summary
 </div>
 </div>
 </div>
-<div id="na" class="section level2">
-<h2>NA</h2>
+<div id="terminologies" class="section level2">
+<h2>Terminologies</h2>
+<ol style="list-style-type: decimal">
+<li><strong>Phenotype-centric mapping</strong>: Approach that reveals
+the genetic changes that drive a phenotype of interest.
+<strong>Limitations</strong>: Pooled forward genetic screens typically
+use low-dimensional phenotypes such as growth or marker expression for
+selection. The use of simple phenotypes can conflate genes acting via
+different mechanisms, requiring extensive follow-up studies to
+disentangle genetic pathways. Additionally, in forward genetics,
+serendipitous discovery is constrained by the prerequisite of selecting
+phenotypes prior to screening.</li>
+<li><strong>Gene-centric mapping</strong>: Catalogs the diverse
+phenotypes caused by a defined genetic change.
+<strong>Limitations</strong>: Typically been restricted in scale to
+rationally chosen targets, limiting systematic comparisons.</li>
+<li><strong>Incomplete penetrance</strong>: in the context of using the
+Anderson-Darling test to detect transcriptional changes, it is referring
+to the fact that not all cells with a genetic perturbation will show the
+expected changes in gene expression. Some cells might carry the mutation
+but not exhibit the altered transcriptional phenotype, leading to a
+mixture of cells with and without the phenotype within the same
+population. The AD test is useful in this context because it is
+sensitive enough to detect changes in subsets of cells, thereby
+identifying differentially expressed genes (DEGs) even when the
+phenotype is not uniformly penetrant across all cells.</li>
+</ol>
+</div>
+<div id="rationale" class="section level2">
+<h2>Rationale</h2>
+<div id="genome-scale-single-cell-crispr-screens"
+class="section level3">
+<h3>Genome-scale single-cell CRISPR Screens</h3>
+<p>In genome-scale single-cell CRISPR screens, the diversity of
+perturbations allows exploration of the range of cell states that can be
+revealed by rich phenotypes. Additionally, as many human genes are well
+characterized, these genes serve as natural controls to anchor
+interpretation of comprehensive datasets. It explains what fraction of
+genetic changes elicit transcriptional phenotypes and how
+transcriptional responses differ between cell types.</p>
+<p>Perturb-seq uses scRNA-seq to concurrently read out the CRISPR
+single-guide RNAs (sgRNAs) (i.e., genetic perturbation) and
+transcriptome (i.e., high-dimensional phenotype) of single cells in a
+pooled format.</p>
+</div>
+<div id="multiplexed-crispri-strategy" class="section level3">
+<h3>Multiplexed CRISPRi strategy</h3>
+<ul>
+<li>Compared with gain-of-function perturbations, a higher proportion of
+loss-of-function perturbations yield phenotypes in growth and
+chemical-genetic screens, especially for members of protein
+complexes.</li>
+<li>CRISPRi allows direct measurement of the efficacy of genetic
+perturbation—knockdown—by scRNA-seq. Exploiting this feature allowed us
+to target each gene in our library with a single element and empirically
+exclude unperturbed genes from downstream analysis.</li>
+<li>CRISPRi tends to yield more homogeneous perturbation than CRISPR
+knockout, which can generate active in-frame indels. The relative
+homogeneity of CRISPRi reduces selection for unperturbed cells,
+especially when studying essential genes.</li>
+<li>Unlike CRISPR knockout, CRISPRi does not lead to activation of the
+DNA damage response which can alter transcriptional signatures.</li>
+<li>To maximize CRISPRi efficacy, we used multiplexed CRISPRi libraries
+in which each element contains two distinct sgRNAs targeting the same
+gene. <strong>To avoid low representation of sgRNAs targeting essential
+genes, we performed growth screens and, during oligonucleotide library
+synthesis, overrepresented constructs that caused strong growth defects,
+ensuring that critical sgRNAs are adequately represented, and mitigating
+biases in the screening results.</strong></li>
+</ul>
+</div>
+<div id="three-pronged-perturb-seq-screening-approach"
+class="section level3">
+<h3>Three-Pronged Perturb-seq Screening Approach</h3>
+<ul>
+<li><p>Using multiple time points allows for the observation of dynamic
+changes and temporal effects of gene perturbation. Different cell types
+can provide insights into cell-specific responses and identify universal
+versus context-specific gene functions.</p></li>
+<li><p>CML K562 Cells are a well-established model for chronic myeloid
+leukemia, making them suitable for studying cancer-related gene
+functions. RPE1 cells are non-cancerous, hTERT-immortalized, and exhibit
+near-normal chromosomal content, making them a good model for studying
+non-cancerous cell biology.</p></li>
+<li><p>Screening Methodology: 10x Genomics Droplet-Based 3’ scRNA-seq
+and Direct sgRNA Capture</p></li>
+<li><p>Exclusion of Doublets: Cells with multiple sgRNAs were excluded
+to avoid confounding effects from multiple gene perturbations. High
+Coverage: Achieving a median coverage of over 100 cells per perturbation
+ensures robust statistical power and reliable detection of gene
+expression changes.</p></li>
+</ul>
+</div>
+<div
+id="a-robust-computational-framework-to-detect-transcriptional-phenotypes"
+class="section level3">
+<h3>A robust computational framework to detect transcriptional
+phenotypes</h3>
+<ul>
+<li><p>Include many control cells bearing diverse non-targeting sgRNAs.
+This allows internal z-normalization of measurements to correct for
+batch effects.</p></li>
+<li><p>Energy Distance Test: A global transcriptional changes test was
+performed using a permuted energy distance test, comparing cells with
+genetic perturbations to control cells. Approximately 31.1% of 9,608
+perturbations targeting a primary transcript caused significant
+transcriptional phenotypes in K562 cells. (<strong>Global
+test</strong>)</p></li>
+<li><p>Anderson-Darling (AD) Test: Used to detect differentially
+expressed genes (DEGs) with incomplete penetrance, the AD test found
+30.5% of perturbations caused &gt;10 DEGs in K562 cells.
+(<strong>Multiple test</strong>)</p></li>
+<li><p>Features of Genetic Perturbations: The strength of the
+transcriptional response correlated with the growth phenotype, and
+essential perturbations leading to significant transcriptional responses
+were identified. Notably, many perturbations caused transcriptional
+changes without affecting growth, indicating an influence on cell
+state.</p></li>
+</ul>
+</div>
+<div id="annotating-gene-function-from-transcriptional-phenotypes"
+class="section level3">
+<h3>Annotating gene function from transcriptional phenotypes</h3>
+<ul>
+<li><strong>Core idea: For different genes, if their perturbations have
+similar transcriptional phenotypes, then their function might be
+similar. Hence cluster perurbations with similar transcriptional
+phenotypes.</strong></li>
+<li>Use correlation between mean expression profile of gene
+perturbations as a scale-invariant metric of similarity.</li>
+<li>Use CORUM3.0 and STRING databese to validate that perturbations with
+correlated transcriptional profile indicate common function. Identified
+327 protein complexes with at least two-thirds of their members present,
+representing 14,165 confirmed protein-protein interactions. The median
+expression profile correlation was strong (r = 0.61). High correlation
+between expression profiles was associated with high STRING
+protein-protein interaction confidence scores.</li>
+<li>Perturbation of genes annotated with known functions led to similar
+transcriptional responses, predicting roles for uncharacterized
+genes.</li>
+<li>Selected poorly annotated genes associated with ribosome biogenesis
+were validated using CRISPRi, confirming their roles in the ribosome.
+<img src="images/clipboard-1436037723.png" /></li>
+</ul>
+</div>
+<div id="data-driven-definition-of-transcriptional-programs"
+class="section level3">
+<h3>Data-driven definition of transcriptional programs</h3>
+<p><strong>Clustering Genes into Expression Programs</strong></p>
+<ul>
+<li><p>Purpose: To identify groups of genes that are co-regulated and
+likely involved in the same biological processes or pathways.</p></li>
+<li><p>Gene Co-regulation: Genes that are co-regulated tend to be
+involved in the same cellular processes or pathways. By clustering these
+genes together, researchers can identify which genes work together and
+uncover the underlying biological mechanisms.</p></li>
+<li><p>Expression Programs: This clustering helps define transcriptional
+programs, which are sets of genes that are co-expressed under certain
+conditions or in response to specific perturbations. Understanding these
+programs provides insights into how cells respond to various stimuli and
+perturbations.</p></li>
+</ul>
+<p><strong>Clustering Perturbations Based on Transcriptional
+Profiles</strong></p>
+<ul>
+<li><p>Purpose: To categorize the effects of genetic perturbations based
+on the changes they induce in gene expression.</p></li>
+<li><p>Transcriptional Profiles: Each genetic perturbation can have a
+unique impact on gene expression. By clustering perturbations with
+similar transcriptional profiles, researchers can group perturbations
+that induce similar changes, suggesting they affect similar pathways or
+processes.</p></li>
+<li><p>Functional Consequences: This clustering helps in understanding
+the functional consequences of different genetic perturbations.
+Perturbations that cluster together likely influence the same or related
+biological pathways, making it easier to infer their roles and
+effects.</p></li>
+</ul>
+<p><strong>Combined Benefits</strong></p>
+<ul>
+<li><p>Map of Biological Processes: Combining both types of clustering
+allows researchers to create a comprehensive map of biological processes
+and how they are regulated. Clustering genes reveals the biological
+programs, while clustering perturbations shows how different genetic
+changes impact these programs.</p></li>
+<li><p>Identifying Key Regulators: By examining which perturbations
+affect specific gene clusters, researchers can identify key regulators
+and pathways involved in particular biological functions or
+responses.</p></li>
+<li><p>Functional Annotation: This dual approach facilitates the
+functional annotation of genes and perturbations. Genes can be annotated
+based on the expression programs they belong to, and perturbations can
+be annotated based on the transcriptional changes they induce.</p></li>
+<li><p>Predicting Gene Function: Clustering genes and perturbations
+together allows for the prediction of gene function. If a perturbation
+is known to affect a certain pathway, genes co-regulated in response to
+this perturbation can be inferred to play roles in that
+pathway.</p></li>
+</ul>
+<p><img src="images/clipboard-2736488339.png" /></p>
+</div>
 </div>
 
 
