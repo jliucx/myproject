@@ -13,6 +13,5 @@ Welcome to my research website.
 -   [Teeth growth analysis](teeth.html)
 -   [Hello](hello.html)
 -   [Summary: Discovery of target genes and pathways at GWAS loci by pooled single-cell CRISPR screens](Analysis1.html)
--   [Summary: Mapping information-rich genotype-phenotype
-landscapes with genome-scale Perturb-seq](Analysis2.html)
+-   [Summary: Mapping information-rich genotype-phenotype landscapes with genome-scale Perturb-seq](Analysis2.html)
 
